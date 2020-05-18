@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="demo">
+
+    </div>
+
+    <div id="demo1">
+
+    </div>
+
+</body>
+
+<script>
+    var car = ["automatic", "manual", "wagnor", "swift"]
+    var car2 = ["i20", "i10"]
+
+
+    //concat 
+    var car3 = car.concat(car2)
+    document.getElementById('demo').innerHTML = car3;
+
+    //slice
+    var car4 = car3.slice(2, 5);
+    document.getElementById('demo').innerHTML = car4;
+
+    //SPLICE 
+
+    // var dish = ["glass", "steal", "aluminium"]
+    // dish.splice(0, 2)
+    // document.getElementById('demo1').innerHTML = dish;
+
+
+
+    var dish = ["glass", "steal", "aluminium"]
+
+
+    //shift
+    dish.shift();
+    document.getElementById('demo1').innerHTML = dish;
+
+    // unshift
+    dish.unshift("brass");
+    document.getElementById('demo1').innerHTML = dish;
+
+    // push
+    dish.push("glass");
+    document.getElementById('demo1').innerHTML = dish;
+
+    //pop
+
+    dish.pop();
+    document.getElementById('demo1').innerHTML = dish;
+
+    //join
+
+    document.getElementById('demo1').innerHTML = dish.join("-");
+</script>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <div id="demo5"></div>
+
+
+</body>
+<script>
+    var marks = [55, 115, 155];
+    var multi;
+
+    marks.forEach(function(value, index, Array) {
+        multi *= Array;
+    });
+
+    console.log(multi);
+
+    // var mix = ["Books", "Cars", "Notes"];
+    // var list = '<ul>';
+    // mix.forEach(function(value) {
+    //     list += '<li>' + value + '</li>'
+    // });
+    // list += '</ul>';
+
+    // document.getElementById('demo').innerHTML = list;
+
+
+    var mix = [95, 150, 200];
+    var newPrice = mix.map(function(value) {
+        if (value > 100) {
+            return value + 50;
+        } else {
+            return value;
+        }
+    });
+    document.getElementById('demo1').innerHTML = newPrice;
+
+    var p = [99, 340, 650];
+    var newPrices = p.filter(function(value) {
+        return value > 99;
+    });
+
+    document.getElementById('demo2').innerHTML = newPrices;
+
+    // var abc = [50, 70, 60];
+    // var xyz = abc.reduce(function(t, value) {
+    //     reduce t + value;
+    // }, 100);
+
+    // document.getElementById('demo3').innerHTML = xyz;
+
+    var abc = [35, 45, 90]
+    var check = abc.every(function(value) {
+        return value > 35;
+    });
+    document.getElementById('demo4').innerHTML = check;
+
+    var lmn = [25, 45, 90]
+    var pqr = lmn.some(function(value) {
+        return value > 35;
+    });
+    document.getElementById('demo5').innerHTML = pqr;
+
+    var def = [35, 45, 90]
+    var fix = def.find(function(value) {
+        return value > 35;
+    });
+    document.getElementById('demo5').innerHTML = fix;
+</script>
+
+</html>

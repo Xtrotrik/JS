@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+
+    </div>
+
+</body>
+
+<script>
+    function student(name, roll, phy, chem, maths) {
+        this.name = name;
+        this.roll = roll;
+        this.phy = phy;
+        this.chem = chem;
+        this.maths = maths;
+        this.total = this.phy + this.chem + this.maths;
+    };
+
+    var txt;
+    var studentresult = [];
+    studentresult.push(new student('chinmay', 12, 55, 54, 65));
+    studentresult.push(new student('raj', 13, 45, 47, 95));
+    studentresult.push(new student('naz', 14, 35, 48, 68));
+
+    txt = '<table border ="1">';
+    txt += '<tr>';
+    txt += '<th> name </th>';
+    txt += '<th> roll </th>';
+    txt += '<th> phy </th>';
+    txt += '<th> chem </th>';
+    txt += '<th> maths </th>';
+    txt += '<th> total </th>';
+    txt += '</tr>';
+    studentresult.forEach(function(value, index) {
+        txt += '<tr>'
+        txt += '<td>' + value.name + '</td>';
+        txt += '<td>' + value.roll + '</td>';
+        txt += '<td>' + value.phy + '</td>';
+        txt += '<td>' + value.chem + '</td>';
+        txt += '<td>' + value.maths + '</td>';
+        txt += '<td>' + value.total + '</td>';
+        txt += '</tr>'
+    });
+
+    txt += '</table>'
+
+    document.getElementById('demo').innerHTML = txt;
+</script>
+
+</html>
